@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiered Party Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <img src="Bird1.jpg" alt="Bird 1" class="title-image" />
+    <h1>Tiered Party Wheel</h1>
+    <img src="Bird2.jpg" alt="Bird 2" class="title-image" />
+  </div>
+
+  <div class="winner-banner" id="winner-banner">
+    <p id="winner-text"></p>
+  </div>
+
+  <div class="content">
+    <div class="left-section">
+      <div class="input-section">
+        <h2>Add Items to Primary Wheel</h2>
+        <input type="text" id="item-input" placeholder="Enter an item" />
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="resetWheels()">Reset</button>
+      </div>
+
+      <div class="wheel-section">
+        <h2>Primary Wheel</h2>
+        <div class="wheel-container">
+          <canvas id="primary-wheel" width="300" height="300"></canvas>
+        </div>
+        <button onclick="spinWheel('primary')">Spin Primary Wheel</button>
+      </div>
+
+      <div class="wheel-section">
+        <h2>Secondary Wheel</h2>
+        <div class="wheel-container">
+          <canvas id="secondary-wheel" width="300" height="300"></canvas>
+        </div>
+        <button onclick="spinWheel('secondary')">Spin Secondary Wheel</button>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h2>Winning Selections</h2>
+      <ul id="winning-selections"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

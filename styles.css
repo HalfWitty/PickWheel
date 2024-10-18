@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title-image {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: 'Impact', sans-serif;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.winner-banner {
+  position: fixed;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 10px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1000; /* Ensure it appears on top */
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.right-section {
+  flex: 1;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+  margin-top: 0;
+}
+
+#winning-selections {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#winning-selections li {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.wheel-container {
+  position: relative;
+  display: inline-block;
+}
+
+canvas {
+  border: 2px solid #000;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-section {
+    padding-right: 0;
+  }
+}
